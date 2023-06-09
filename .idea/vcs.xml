@@ -2,8 +2,5 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/angular-13-remote" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/angular-14-host" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/angular-16-remote" vcs="Git" />
   </component>
 </project>
