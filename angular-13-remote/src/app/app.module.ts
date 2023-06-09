@@ -1,4 +1,5 @@
-import { NgModule } from '@angular/core';
+import {DoBootstrap, Injector, NgModule} from '@angular/core';
+import {createCustomElement} from "@angular/elements";
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -15,4 +16,12 @@ import { AppComponent } from './app.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule implements DoBootstrap{
+  constructor(private injector: Injector) {
+  }
+
+  public ngDoBootstrap() {
+    const el = createCustomElement(AppComponent, { injector: this.injector });
+    customElements.define('angular-13-remote', el);
+  }
+}
